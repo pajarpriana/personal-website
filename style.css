@@ -1,0 +1,69 @@
+/* Styling untuk body */
+body {
+    background-color: #f0f0f0; /* Ganti dengan warna yang diinginkan */
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Styling untuk header */
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Styling untuk navigation */
+nav {
+    float: left;
+    width: 25%;
+    background: #f4f4f4;
+    padding: 20px;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 10px 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Styling untuk main content */
+main {
+    float: left;
+    width: 75%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Styling untuk iframe */
+iframe {
+    width: 100%;
+    height: 80vh;
+    border: none;
+}
+
+/* Styling untuk footer */
+footer {
+    clear: both;
+    text-align: center;
+    padding: 10px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+

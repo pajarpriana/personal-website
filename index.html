@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Personal Website</h1>
+    </header>
+
+    <nav>
+        <h2></h2>
+        <ul>
+            <li><a href="#home" onclick="loadContent('home')">Home</a></li>
+            <li><a href="#about" onclick="loadContent('about')">About Me</a></li>
+            <li><a href="#contact" onclick="loadContent('contact')">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <iframe id="contentFrame" src="about:blank"></iframe>
+    </main>
+
+    <footer>
+        <p>TERIMAKASIH TELAH MENGUNJUNGI WEBSITE SAYA</p>
+        <p>&copy; 2024 Pajar Priana</p>
+    </footer>
+
+    <script>
+        function loadContent(page) {
+            let content = '';
+
+            switch(page) {
+                case 'home':
+                    content = `
+                        <h1>Welcome to My Website!</h1>
+
+                        <p>Hii, selamat datang di website PAJAR PRIANA , di website ini kalian akan mengetahui banyak hal tentang saya</p>`;
+                    break;
+                case 'about':
+                    content = `
+                        <h1>About Me</h1>
+                        <p>Kalian ingin tau banyak hal tentang saya? mari berkunjung di media sosial saya yg ada di menu contact. Mari 
+                            jelajahi dan berteman dengan saya
+                        </p>
+                        
+                        <ul>
+                            
+                        </ul>`;
+                    break;
+                
+                case 'contact':
+                    content = `
+                        <h1>Contact Me</h1>
+                        <p>Email: pajarpriana77@gmail.com</p>
+                        <p>Phone: 085710492432</p>
+                        <p>Follow me on social media:</p>
+                        <ul>
+                            <li><a href="https://www.tiktok.com/@tmngabut17?_t=8qX18JvzwHp&_r=1" target="_blank">Tiktok</a></li>
+                            <li><a href="https://instagram.com/pjrpriana/" target="_blank">Instagram</a></li>
+                        </ul>`;
+                    break;
+                default:
+                    content = '<p>Page not found!</p>';
+            }
+
+            document.getElementById('contentFrame').srcdoc = content;
+        }
+
+        // Load default page (home) on page load
+        window.onload = function() {
+            loadContent('home');
+        };
+    </script>
+</body>
+</html>
